@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#102b50">
+<meta name="description" content="Vortex Dynamics explores conceptual aerospace design, paper aircraft, physics and chemistry, gaming, and technology.">
+<title>Vortex Dynamics | Engineering Ideas. Exploring Possibilities.</title>
+<style>
+:root{--navy:#102b50;--navy2:#173e6c;--blue:#3d76b7;--ink:#17263a;--muted:#62738a;--pale:#f3f6fa;--line:#dce4ee;--white:#fff;--shadow:0 14px 38px rgba(16,43,80,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:92px}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.6}a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-weight:850;letter-spacing:.08em;color:var(--navy);font-size:.96rem}.brand-mark{width:44px;height:44px;object-fit:contain;border-radius:8px}.brand-fallback{width:44px;height:44px;display:grid;place-items:center;background:var(--navy);color:white;border-radius:8px;font-weight:900;font-size:1.3rem}.navlinks{display:flex;align-items:center;gap:20px;font-size:.88rem;font-weight:650;color:#354a63}.navlinks a:hover,.navlinks a:focus{color:var(--blue)}.menu-btn{display:none;border:1px solid var(--line);background:white;color:var(--navy);border-radius:10px;padding:9px 12px}
+.hero{position:relative;overflow:hidden;background:linear-gradient(125deg,#f8fafc 0%,#edf3f9 56%,#e3edf7 100%);padding:86px 0 78px}.hero:after{content:"";position:absolute;width:460px;height:460px;border:1px solid rgba(16,43,80,.09);border-radius:50%;right:-120px;top:-170px;box-shadow:0 0 0 44px rgba(16,43,80,.025),0 0 0 92px rgba(16,43,80,.02)}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:46px;position:relative;z-index:1}.eyebrow{display:inline-flex;align-items:center;gap:9px;text-transform:uppercase;letter-spacing:.16em;font-size:.73rem;font-weight:850;color:var(--blue)}.eyebrow:before{content:"";width:25px;height:2px;background:var(--blue)}h1{font-size:clamp(2.6rem,6vw,5rem);line-height:1.03;letter-spacing:-.055em;color:var(--navy);margin:18px 0 22px;max-width:700px}.hero p{font-size:1.1rem;color:#52657c;max-width:610px;margin:0 0 28px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 19px;border-radius:9px;font-weight:750;border:1px solid var(--navy);transition:transform .18s,background .18s}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--navy);color:white}.btn-secondary{background:transparent;color:var(--navy)}.hero-art{min-height:310px;border-radius:24px;background:linear-gradient(145deg,#102b50,#1b4779);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;box-shadow:var(--shadow)}.hero-art:before,.hero-art:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.16);border-radius:50%;width:300px;height:300px}.hero-art:after{width:390px;height:390px}.logo-hero{position:relative;z-index:1;width:min(62%,230px);aspect-ratio:1;object-fit:contain;border-radius:14px;filter:drop-shadow(0 12px 20px rgba(0,0,0,.12))}.hero-monogram{position:relative;z-index:1;color:#fff;font-size:clamp(5rem,12vw,9rem);font-weight:900;letter-spacing:-.1em}
+section{padding:78px 0}.section-head{max-width:700px;margin-bottom:30px}.kicker{color:var(--blue);font-weight:850;text-transform:uppercase;letter-spacing:.14em;font-size:.74rem}h2{font-size:clamp(2rem,4vw,3rem);line-height:1.12;letter-spacing:-.04em;color:var(--navy);margin:10px 0 14px}.section-head p{color:var(--muted);font-size:1.03rem;margin:0}.divisions{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border:1px solid var(--line);border-radius:16px;padding:25px;background:white;box-shadow:0 5px 18px rgba(16,43,80,.035);display:flex;flex-direction:column;min-height:225px;transition:transform .2s,box-shadow .2s,border-color .2s}.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#bdcde0}.card-icon{height:44px;width:44px;display:grid;place-items:center;border-radius:12px;background:#edf3fa;color:var(--navy);font-size:1.35rem;margin-bottom:18px}.card h3{margin:0 0 8px;color:var(--navy);font-size:1.18rem}.card p{margin:0 0 18px;color:var(--muted);font-size:.94rem}.card .learn{margin-top:auto;color:var(--blue);font-weight:800;font-size:.9rem}.about-band{background:var(--pale)}.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:center}.about-mark{min-height:260px;border-radius:20px;background:var(--navy);display:grid;place-items:center;color:white;font-size:6rem;font-weight:900;letter-spacing:-.1em;position:relative;overflow:hidden}.about-mark:after{content:"";position:absolute;width:280px;height:280px;border:1px solid #ffffff26;border-radius:50%;box-shadow:0 0 0 35px #ffffff0b,0 0 0 70px #ffffff08}.about-mark span{z-index:1}.values{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:22px}.value{border-left:3px solid var(--blue);padding:8px 12px;background:white;color:#3e526a;font-weight:700;font-size:.92rem}
+.division-detail{padding:52px 0;border-top:1px solid var(--line)}.detail-grid{display:grid;grid-template-columns:.24fr 1fr;gap:22px}.detail-num{font-size:2rem;font-weight:900;color:#c7d5e5}.detail-grid h3{margin:0 0 8px;font-size:1.55rem;color:var(--navy)}.detail-grid p{margin:0;color:var(--muted);max-width:780px}.detail-note{margin-top:16px;font-size:.87rem;color:#6d7e92}
+footer{background:#0b203b;color:#dce6f2;padding:38px 0}.footer-row{display:flex;align-items:center;justify-content:space-between;gap:20px}.footer-brand{font-weight:850;letter-spacing:.1em}.footer-small{color:#a9bad0;font-size:.84rem}
+@media(max-width:820px){.navlinks{gap:12px;font-size:.8rem}.hero{padding:62px 0}.hero-grid{grid-template-columns:1fr;gap:30px}.hero-art{min-height:250px}.logo-hero{width:160px}.divisions{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr;gap:26px}.about-mark{min-height:200px}.detail-grid{grid-template-columns:50px 1fr}}
+@media(max-width:620px){.wrap{width:min(100% - 28px,1120px)}.nav{min-height:66px;flex-wrap:wrap;padding:10px 0}.brand{font-size:.82rem}.brand-mark,.brand-fallback{width:38px;height:38px}.menu-btn{display:block}.navlinks{display:none;order:3;width:100%;padding:10px 0 6px;flex-direction:column;align-items:stretch;gap:0}.navlinks.open{display:flex}.navlinks a{padding:11px 8px;border-top:1px solid var(--line);font-size:.95rem}.hero{padding:48px 0 54px}h1{font-size:clamp(2.55rem,12vw,3.7rem)}.hero p{font-size:1rem}.hero-art{min-height:215px}section{padding:58px 0}.divisions{grid-template-columns:1fr}.card{min-height:0;padding:22px}.values{grid-template-columns:1fr}.footer-row{align-items:flex-start;flex-direction:column;gap:8px}.detail-grid{grid-template-columns:36px 1fr}.detail-num{font-size:1.4rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="Vortex Dynamics home">
+      <img class="brand-mark" src="assets/vd-logo-1.jpg" alt="Vortex Dynamics logo" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+      <span class="brand-fallback" style="display:none">V</span>
+      <span>VORTEX DYNAMICS</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navlinks">Menu ☰</button>
+    <nav class="navlinks" id="navlinks" aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#divisions">Divisions</a><a href="#aerospace">Aerospace</a><a href="#about">About VD</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Concepts · Engineering · Innovation</span>
+      <h1>Engineering ideas.<br>Exploring possibilities.</h1>
+      <p>Vortex Dynamics is an independent conceptual project exploring aerospace design, paper aircraft, science, gaming, and emerging technology.</p>
+      <div class="actions"><a class="btn btn-primary" href="#divisions">Explore our divisions ↗</a><a class="btn btn-secondary" href="#about">Discover VD</a></div>
+    </div>
+    <div class="hero-art" aria-label="Vortex Dynamics brand emblem">
+      <img class="logo-hero" src="assets/vd-logo-2.jpg" alt="Vortex Dynamics emblem" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="hero-monogram" style="display:none">VD</span>
+    </div>
+  </div>
+</section>
+<section id="divisions">
+  <div class="wrap">
+    <div class="section-head"><span class="kicker">One organization · Five divisions</span><h2>Different disciplines.<br>One curious mindset.</h2><p>Explore the areas where Vortex Dynamics develops concepts, tests ideas, and learns by doing.</p></div>
+    <div class="divisions">
+      <article class="card" id="aerospace"><div class="card-icon">✈</div><h3>Aerospace</h3><p>Conceptual aircraft design, aerodynamic principles, configurations, and engineering research.</p><a class="learn" href="#detail-aerospace">Explore Aerospace ↗</a></article>
+      <article class="card" id="paper-plane"><div class="card-icon">🛩</div><h3>Paper Plane</h3><p>Paper aircraft designs, prototypes, flight tests, and experiments in flight performance.</p><a class="learn" href="#detail-paper">Explore Paper Plane ↗</a></article>
+      <article class="card" id="physics-chemistry"><div class="card-icon">⚛</div><h3>Physics &amp; Chemistry</h3><p>Scientific principles, material concepts, and experiments that turn questions into learning.</p><a class="learn" href="#detail-pc">Explore P&amp;C ↗</a></article>
+      <article class="card" id="game-division"><div class="card-icon">🎮</div><h3>Game Division</h3><p>Gaming, crew activities, and projects inspired by interactive entertainment.</p><a class="learn" href="#detail-games">Explore Gaming ↗</a></article>
+      <article class="card" id="cybertech"><div class="card-icon">⌘</div><h3>CyberTech</h3><p>Computing, artificial intelligence, and technology-driven ideas and experiments.</p><a class="learn" href="#detail-cyber">Explore CyberTech ↗</a></article>
+      <article class="card"><div class="card-icon">↗</div><h3>Built to explore</h3><p>VD brings different interests together through curiosity, creativity, and practical learning.</p><a class="learn" href="#about">Our mission ↗</a></article>
+    </div>
+  </div>
+</section>
+<section class="about-band" id="about">
+  <div class="wrap about-grid">
+    <div class="about-mark"><span>VD</span></div>
+    <div><span class="kicker">About Vortex Dynamics</span><h2>A place for ideas to take shape.</h2><p>Vortex Dynamics connects conceptual aerospace engineering, hands-on paper aircraft experiments, science exploration, gaming, and technology under one identity.</p><p>Our focus is learning, creative problem-solving, and exploring what might be possible. Concepts are presented as concepts, and experiments are opportunities to learn.</p><div class="values"><div class="value">Curiosity first</div><div class="value">Design with purpose</div><div class="value">Test and learn</div><div class="value">Explore responsibly</div></div></div>
+  </div>
+</section>
+<section aria-label="Division details">
+  <div class="wrap">
+    <div class="section-head"><span class="kicker">Explore the divisions</span><h2>What we work on</h2><p>Each division has its own focus and room for future projects, write-ups, and updates.</p></div>
+    <article class="division-detail" id="detail-aerospace"><div class="detail-grid"><div class="detail-num">01</div><div><h3>Aerospace</h3><p>Exploring aircraft configurations, lift and drag, stability, control, propulsion concepts, and conceptual aircraft design. The aim is to understand the principles behind flight and use them to develop thoughtful design ideas.</p><div class="detail-note">Focus: conceptual design · aerodynamics · flight principles</div></div></div></article>
+    <article class="division-detail" id="detail-paper"><div class="detail-grid"><div class="detail-num">02</div><div><h3>Paper Plane</h3><p>Designing and testing folded-paper aircraft, observing glide and stability, and learning how small changes in shape affect flight. Future updates can document prototypes, test notes, and design comparisons.</p><div class="detail-note">Focus: prototypes · flight tests · iterative design</div></div></div></article>
+    <article class="division-detail" id="detail-pc"><div class="detail-grid"><div class="detail-num">03</div><div><h3>Physics &amp; Chemistry</h3><p>Exploring physical principles, chemistry, material properties, and shape-changing or advanced-material concepts through research and safe experiments.</p><div class="detail-note">Focus: science concepts · materials · safe experimentation</div></div></div></article>
+    <article class="division-detail" id="detail-games"><div class="detail-grid"><div class="detail-num">04</div><div><h3>Game Division</h3><p>A home for gaming, crew activities, gameplay goals, and game-related projects. This section can grow with guides, achievements, team updates, and original game concepts.</p><div class="detail-note">Focus: gaming · crew activities · game projects</div></div></div></article>
+    <article class="division-detail" id="detail-cyber"><div class="detail-grid"><div class="detail-num">05</div><div><h3>CyberTech</h3><p>Exploring computing, artificial intelligence, digital tools, and technology concepts with an emphasis on creativity, useful skills, and responsible use.</p><div class="detail-note">Focus: computing · AI · technology projects</div></div></div></article>
+  </div>
+</section>
+</main>
+<footer><div class="wrap footer-row"><div><div class="footer-brand">VORTEX DYNAMICS</div><div class="footer-small">Concepts · Engineering · Innovation</div></div><div class="footer-small">An independent conceptual project. © <span id="year"></span> Vortex Dynamics.</div></div></footer>
+<script>
+const btn=document.getElementById('menuBtn'), nav=document.getElementById('navlinks');
+btn.addEventListener('click',()=>{const open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',String(open));btn.textContent=open?'Close ✕':'Menu ☰'});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.textContent='Menu ☰'}));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
